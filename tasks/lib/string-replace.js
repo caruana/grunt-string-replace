@@ -104,7 +104,7 @@ exports.init = function(grunt) {
 
   exports.multi_str_replace = function(string, replacements) {
     return replacements.reduce(function(content, replacement) {
-      return content.replace(replacement[0], replacement[1]);
+      return content.split(replacement[0]).join(replacement[1])
     }, string);
   };
 
